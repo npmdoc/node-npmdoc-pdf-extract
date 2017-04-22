@@ -1,18 +1,20 @@
-<svg height="238" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="238" fill="#555" width="720"></rect>
+<svg height="270" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="270" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">12 megabytes</tspan>
-<tspan x="10" y="42">└─┬ pdf-extract@1.0.11 </tspan>
-<tspan x="10" y="58">  ├── async@0.1.22 </tspan>
-<tspan x="10" y="74">  ├── eyespect@0.1.10 </tspan>
-<tspan x="10" y="90">  ├── pathhash@1.0.0 </tspan>
-<tspan x="10" y="106">  ├─┬ rimraf@2.0.3 </tspan>
-<tspan x="10" y="122">  │ └── graceful-fs@1.1.14 </tspan>
-<tspan x="10" y="138">  ├─┬ temp@0.8.3 </tspan>
-<tspan x="10" y="154">  │ ├── os-tmpdir@1.0.2 </tspan>
-<tspan x="10" y="170">  │ └── rimraf@2.2.8 </tspan>
-<tspan x="10" y="186">  └─┬ walk@2.2.1 </tspan>
-<tspan x="10" y="202">    └─┬ forEachAsync@2.2.1 </tspan>
-<tspan x="10" y="218">      └── sequence@2.2.1</tspan>
+<tspan x="10" y="26">12 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ pdf-extract@1.0.11 </tspan>
+<tspan x="10" y="90">  ├── async@0.1.22 </tspan>
+<tspan x="10" y="106">  ├── eyespect@0.1.10 </tspan>
+<tspan x="10" y="122">  ├── pathhash@1.0.0 </tspan>
+<tspan x="10" y="138">  ├─┬ rimraf@2.0.3 </tspan>
+<tspan x="10" y="154">  │ └── graceful-fs@1.1.14 </tspan>
+<tspan x="10" y="170">  ├─┬ temp@0.8.3 </tspan>
+<tspan x="10" y="186">  │ ├── os-tmpdir@1.0.2 </tspan>
+<tspan x="10" y="202">  │ └── rimraf@2.2.8 </tspan>
+<tspan x="10" y="218">  └─┬ walk@2.2.1 </tspan>
+<tspan x="10" y="234">    └─┬ forEachAsync@2.2.1 </tspan>
+<tspan x="10" y="250">      └── sequence@2.2.1</tspan>
 </text>
 </svg>

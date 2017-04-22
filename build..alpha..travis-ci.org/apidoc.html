@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-extract.pdf-extract">
+            function <span class="apidocSignatureSpan"></span>pdf-extract
+            <span class="apidocSignatureSpan">(pdf_path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.pdf-extract.electronic">
             function <span class="apidocSignatureSpan">pdf-extract.</span>electronic
             <span class="apidocSignatureSpan">()</span>
@@ -167,6 +176,55 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pdf-extract" id="apidoc.module.pdf-extract">module pdf-extract</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-extract.pdf-extract" id="apidoc.element.pdf-extract.pdf-extract">
+        function <span class="apidocSignatureSpan"></span>pdf-extract
+        <span class="apidocSignatureSpan">(pdf_path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pdf-extract = function (pdf_path, options, cb) {
+  var err;
+  var processor = new Raw();
+  if (!&#x27;pdf_path&#x27;) {
+    err = &#x27;you must supply a pdf path as the first parameter&#x27;
+    return cb(err);
+  }
+  if (!options) {
+    err =  &#x27;no options supplied. You must supply an options object with the &#x22;type&#x22; field set&#x27;
+    return cb(err);
+  }
+  if (!options.hasOwnProperty(&#x27;type&#x27;) || ! options.type) {
+    err  =&#x27;error, you must specify the type of extraction you wish to perform in the options object. Allowed values are &#x22;ocr&#x22; or
+ &#x22;text&#x22;&#x27;;
+    return cb(err);
+  }
+  if (options.type === &#x27;ocr&#x27;) {
+    processor = new Raw();
+  }
+  else if (options.type === &#x27;text&#x27;) {
+    processor = new Electronic();
+  }
+  else {
+    err  =&#x27;error, you must specify the type of extraction you wish to perform in the options object. Allowed values are &#x22;ocr&#x22; or
+ &#x22;text&#x22;&#x27;;
+    return cb(err);;
+  }
+  fs.exists(pdf_path, function (exists) {
+    if (!exists) {
+      err = &#x27;no file exists at the path you specified&#x27;;
+      return cb(err);
+    }
+    processor.process(pdf_path, options);
+    cb();
+  });
+  return processor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
